@@ -300,6 +300,5 @@ aside:hover {
 	}
 	#dock ul {
 		column-gap: var(--spacing-l);
-		row-gap: var(--spacing-l);
 	}
 }
