@@ -36,7 +36,7 @@ header {
 }
 
 #date-time,
-#weather { flex: 1 1 auto; }
+#weather { flex: 1 1 auto; font-size: 1.3rem; }
 
 #weather { text-align: right; }
 
@@ -48,8 +48,15 @@ header {
 
 #date,
 #location {
-    color: var(--primary-link-hover-color);
+    color: var(--primary-link-color);
     font-weight: 700;
+}
+
+#date:focus,
+#date:hover,
+#time:focus,
+#time:hover {
+	color: var(--primary-link-hover-color);
 }
 
 #time,
@@ -69,11 +76,17 @@ header {
 
 aside {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+	fill: var(--primary-link-color);
+	transform: scale(50%);
 }
 
 aside img,
 aside svg { height: 4.5rem; }
+
+aside:hover {
+	fill: url(#asideGradient);
+}
 
 #dock ul {
     display: flex;
@@ -84,6 +97,7 @@ aside svg { height: 4.5rem; }
     column-gap: var(--spacing-m);
     row-gap: var(--spacing-m);
     padding: 0;
+	margin-top: 2rem;
 }
 
 #dock a {
@@ -100,23 +114,28 @@ aside svg { height: 4.5rem; }
 }
 
 #dock li:nth-child(1) a:focus,
-#dock li:nth-child(1) a:hover { fill: hsl(5, 81%, 56%); } /* Gmail */
+#dock li:nth-child(1) a:hover { fill: hsl(4, 81%, 56%); } /* Gmail */
 #dock li:nth-child(2) a:focus,
-#dock li:nth-child(2) a:hover { fill: hsl(217, 89%, 61%); } /* Google Calendar */
+#dock li:nth-child(2) a:hover { fill: hsl(217, 90%, 61%); } /* Gmail */
 #dock li:nth-child(3) a:focus,
-#dock li:nth-child(3) a:hover { fill: hsl(44, 100%, 50%); } /* Google Keep */
+#dock li:nth-child(3) a:hover { fill: hsl(44, 98%, 50%); } /* Google Keep */
 #dock li:nth-child(4) a:focus,
-#dock li:nth-child(4) a:hover { fill: var(--primary-link-hover-color); } /* Notion */
+#dock li:nth-child(4) a:hover { fill: hsl(0, 100%, 50%); } /* Youtube */
 #dock li:nth-child(5) a:focus,
-#dock li:nth-child(5) a:hover { fill: hsl(102, 53%, 52%); } /* Github */
+#dock li:nth-child(5) a:hover { fill: url(#geminiGradient); }   /*{ fill: hsl(208, 96%, 51%); }  Gemini */
 #dock li:nth-child(6) a:focus,
-#dock li:nth-child(6) a:hover { fill: hsl(14, 89%, 53%); } /* Figma */
+#dock li:nth-child(6) a:hover { fill: hsl(136, 53%, 43%); } /* Calendar */
+#dock li:nth-child(7) a:focus,
+#dock li:nth-child(7) a:hover { fill: var(--primary-link-hover-color); } /* Github */
+#dock li:nth-child(8) a:focus,
+#dock li:nth-child(8) a:hover { fill: hsl(214, 91%, 53%); } /* Inoreader */
 
 #dock svg { height: 1.5rem; }
 
 #search {
     display: flex;
     justify-content: center;
+	margin-top: -1.5rem;
 }
 
 #search form {
@@ -125,17 +144,18 @@ aside svg { height: 4.5rem; }
 }
 
 #search input {
-    background-color: transparent;
+	background-color: transparent;
     background-position: right 1.25rem center;
     background-repeat: no-repeat;
     background-size: 1.5rem 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 1.2rem;
     color: var(--primary-font-color);
     font-family: var(--font-sans-serif);
     line-height: 1.5;
     outline: 0.25rem solid transparent;
     padding: var(--spacing-m);
     width: 100%;
+	padding-left: 3.6rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -166,9 +186,23 @@ aside svg { height: 4.5rem; }
 
 #search input:focus {
     background-color: hsl(var(--color-white-hsl) / 0.025);
-    border-color: var(--color-orange);
-    outline-color: hsl(var(--color-orange-hsl) / 0.25);
+    border-color: var(--color-teal);
+    outline-color: hsl(var(--color-teal-hsl) / 0.25);
 }
+
+#search .brave-icon {
+	position: relative;
+	width: 24px;
+    left: 1.2rem;
+    top: 50%;
+	display: block;
+    fill: var(--primary-link-color);
+}
+
+#search .brave-icon:hover {
+	fill: #FB542B;
+}
+
 
 #bookmarks {
     align-items: flex-start;
