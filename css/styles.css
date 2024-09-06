@@ -132,6 +132,15 @@ aside:hover {
 
 #dock svg { height: 1.5rem; }
 
+#dock li:nth-child(1),
+#dock li:nth-child(2), {
+	margin-top: 0.1rem;
+}
+
+#dock li:nth-child(4) {
+	margin-top: 0.25rem;
+}
+
 #search {
     display: flex;
     justify-content: center;
@@ -280,4 +289,17 @@ aside:hover {
     }
 
     #bookmarks { flex-direction: row; }
+}
+
+@media (max-width: 768px) {
+	#dock ul {
+		margin-top: -0rem;
+	}
+	aside {
+		transform: scale(70%);
+	}
+	#dock ul {
+		column-gap: var(--spacing-l);
+		row-gap: var(--spacing-l);
+	}
 }
