@@ -305,4 +305,10 @@ aside:hover {
 	#search .brave-icon {
 		fill: #FB542B;
 	}
+	@media (prefers-color-scheme: dark) {
+		#search input { border-color: hsl(var(--color-white-hsl) / 0.5); }
+	}
+	@media (prefers-color-scheme: light) {
+		#search input { border-color: hsl(var(--color-black-hsl) / 0.5); }
+	}
 }
