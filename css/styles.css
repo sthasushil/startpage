@@ -171,6 +171,8 @@ aside:hover {
     #search input {
         background-image: var(--svg-search-gray);
         border: 0.125rem solid hsl(var(--color-white-hsl) / 0.25);
+		background-color: hsl(var(--color-white-hsl) / 0.05);
+		box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
     }
     
     #search input:hover { border-color: hsl(var(--color-white-hsl) / 0.5); }    
@@ -185,9 +187,12 @@ aside:hover {
     #search input {
         background-image: var(--svg-search-light-gray);
         border: 0.125rem solid hsl(var(--color-black-hsl) / 0.25);
+		box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
     } 
 
     #search input:hover { border-color: hsl(var(--color-black-hsl) / 0.5); }
+	
+	aside { fill: url(#asideGradient); }
 
     #bookmarks a:focus,
     #bookmarks a:hover { background-color: hsl(var(--color-black-hsl) / 0.05); }
