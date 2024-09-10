@@ -34,7 +34,15 @@ function weatherBalloon(locationKey) {
     });
 }
 
+function focusSearchBar() {
+      document.getElementById("q").focus();
+    }
 
+    document.addEventListener("keydown", function(event) {
+      if (event.ctrlKey && event.key === "/") {
+        focusSearchBar();
+      }
+    });
 
 function traichu() {
 	dateTime();
