@@ -1,10 +1,11 @@
-const CACHE_VERSION = 'v1'; // Change this number for each update
+const CACHE_VERSION = 'v2'; // Change this number for each update
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('offline-cache' + CACHE_VERSION).then(function(cache) {
       return cache.addAll([
-        '/index.html',
+        '/',
+	      '/index.html',
         '/css/',
 		'/css/*.css',
 		'/js/main.js',
