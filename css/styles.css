@@ -84,7 +84,7 @@ aside {
 aside img,
 aside svg { height: 4.5rem; }
 
-aside:hover {
+aside {
 	fill: url(#asideGradient);
 }
 
