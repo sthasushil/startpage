@@ -77,7 +77,6 @@ header {
 aside {
     display: flex;
     justify-content: center;
-	fill: var(--primary-link-color);
 	transform: scale(50%);
 }
 
